@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(api/v1/.*)$ /api/v1/index.php [NC,L,QSA]
+RewriteRule ^(pic/.*)$ $1 [NC,L,QSA]
+RewriteRule ^$ /web/index.html [NC,L,QSA]

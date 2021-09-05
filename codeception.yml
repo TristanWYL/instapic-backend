@@ -1,0 +1,50 @@
+# suite config
+suites:
+    api:
+        actor: ApiTester
+        path: .
+        modules:
+            enabled:
+                - REST:
+                    url: http://localhost/api/v1/
+                    depends: PhpBrowser
+                    part: Json
+                - Db:
+                    dsn: 'mysql:host=localhost;dbname=instapic'
+                    user: 'instapic_user'
+                    password: 'xd249fnc4d'
+                    dump: 'tests/_data/instapic_test.sql'
+                    populate: true
+                    cleanup: true
+                    reconnect: true
+                    waitlock: 10
+                    # ssl_key: '/path/to/client-key.pem'
+                    # ssl_cert: '/path/to/client-cert.pem'
+                    # ssl_ca: '/path/to/ca-cert.pem'
+                    # ssl_verify_server_cert: false
+                    # ssl_cipher: 'AES256-SHA'
+                    populator: 'mysql -u $user -p$password $dbname < $dump'
+                    # initial_queries:
+                    #     - 'CREATE DATABASE IF NOT EXISTS instapic;'
+                    #     - 'USE instapic;'
+                    #     - 'SET NAMES utf8;'
+                - Asserts:
+
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+
+settings:
+    shuffle: false
+    lint: true
+
+coverage:
+    enabled: true
+    # remote: true
+    include:
+        - api/*
+    exclude:
+        - api/v1/src/ui/*
+        - api/v1/init.php
