@@ -10,6 +10,7 @@
 - [4. How to extend the functionality of this api system](#4-how-to-extend-the-functionality-of-this-api-system)
 - [5. Test](#5-test)
   - [5.1. How to run the test](#51-how-to-run-the-test)
+  - [5.2. Potential issue for generating the coverage report](#52-potential-issue-for-generating-the-coverage-report)
   - [5.3. Note](#53-note)
 - [6. Note](#6-note)
 - [7. License](#7-license)
@@ -321,13 +322,10 @@ Now, you are ready to call the api with the following url:
 
     `php vendor/bin/codecept run tests/Cest.php:exampleTest --steps`
 
-    
-
-
-<!-- ## 5.2. Issue fix
+## 5.2. Potential issue for generating the coverage report
 When you run the test, if you come across with the error: `XDEBUG_MODE=coverage or xdebug.mode=coverage has to be set`, adding the environment variable `XDEBUG_MODE=coverage` to the command will fix it. For example, if you are using Windows OS and a command prompt, the following command should work:
 
-`set XDEBUG_MODE=coverage&& php vendor/bin/codecept run --coverage --coverage-html -o "settings: shuffle: true"` -->
+`set XDEBUG_MODE=coverage&& php vendor/bin/codecept run --coverage --coverage-html -o "settings: shuffle: true"`
 
 ## 5.3. Note
 
