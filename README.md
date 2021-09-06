@@ -42,7 +42,7 @@ Or conduct these operations with a MySQL GUI client.
 
 **STEP 5:** Run *./api/v1/init.php* with php.exe for initliazing the project
 
-    > php.exe init.php
+    > php api/v1/init.php
 
 Now, the api is ready to run
 
