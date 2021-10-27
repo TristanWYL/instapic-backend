@@ -335,7 +335,7 @@ For the sake of data security, testing environment and production environment sh
 
 This repository is originally built for a technical interview, so everything is coded for fast prototyping. Due to this, some features seemingly irregarding with the functionality of the website, but actually important have not been incorporated, including:
 
-* applying OAuth to protect the api (authenticating the client app and users)
+* applying JWT to protect the api (authenticating the client app and users)
 
 # 7. License
 
